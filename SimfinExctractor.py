@@ -3,13 +3,14 @@ import pandas as pd
 import numpy as np
 from urllib.request import urlopen
 
-APIKEY = 'Get'
+APIKEY = 'Insert API Key here'
 Quarters = ['Q1', 'Q2', 'Q3', 'Q4']
 
 
 def datatoexcel(data, filename, verbose=False):
     data_export = data.copy()
 
+    #Add columns to an existing Excel, retain existing data
     if os.path.isfile(filename):
         existing_data = pd.read_excel(filename)
         data_columns = data.columns.values
@@ -181,13 +182,9 @@ def make_ratios(dataframe):
 
     return dataframe
 
-
-#
 # for i in range(2011, 2019):
 #     for j in Quarters:
 #         print('Getting info for year {}, quarter {}'.format(i, j))
 #         GetFinancialData('WMT', year=i, ptype=j, toexcel=True)
 
-WMT3 = pd.read_excel('WMT.xlsx')
-WMT2 = make_ratios(WMT3)
-WMT2.to_excel('WMT2.xlsx')
+

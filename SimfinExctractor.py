@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 from urllib.request import urlopen
 
-APIKEY = 'BasEy7B16UhEOa4bWUNWM7hnbudMuhFp'
+APIKEY = 'Get'
 Quarters = ['Q1', 'Q2', 'Q3', 'Q4']
 
 

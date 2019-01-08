@@ -166,21 +166,6 @@ def GetFinancialData(ticker, ptype='FY', year=2017, save=False, toexcel=False):
 
     return StockPD
 
-    # MSFT = GetFinancialData('MSFT',year=2012,ptype='Q4',toexcel=True)
-    # stocks = ['IBM', 'XOM','CVX']
-
-
-def make_ratios(dataframe):
-
-    dataframe.set_index('Information', inplace=True)
-    for i in range(len(dataframe)):
-        name = str(dataframe.index.values[i] + ' Ratio')
-        try:
-            dataframe.loc[name] = dataframe.iloc[i] / dataframe.iloc[i].iloc[-1]
-        except:
-            print('0 Value')
-
-    return dataframe
 
 # for i in range(2011, 2019):
 #     for j in Quarters:

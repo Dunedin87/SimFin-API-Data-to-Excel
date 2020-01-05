@@ -221,10 +221,10 @@ def simfin_price(bulk_data_path):
     return prices
 
 
-x, y = csv_to_tensor()
-
-torch.save(x, 'data//x_tensor_R8.pt')
-torch.save(y, 'data//y_tensor_R8.pt')
-
-print(x.size())
-print(y.size())
+# x, y = csv_to_tensor()
+#
+# torch.save(x, 'data//x_tensor_R8.pt')
+# torch.save(y, 'data//y_tensor_R8.pt')
+#
+# print(x.size())
+# print(y.size())
